@@ -1,0 +1,6 @@
+# NPM specific
+node_modules
+package-lock.json
+
+# Editor specific
+.vscode
