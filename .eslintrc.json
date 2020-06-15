@@ -1,0 +1,55 @@
+{
+    "root": true,
+    "env": {
+        "browser": false,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "sourceType": "script",
+        "ecmaVersion": 2018
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+        "no-multi-spaces": "warn",
+        "no-whitespace-before-property": "warn",
+        "sort-imports": [
+            "warn",
+            {
+                "ignoreCase": true
+            }
+        ],
+        "no-warning-comments": [
+            "warn",
+            {
+                "terms": [
+                    "TODO:",
+                    "FIXME:"
+                ],
+                "location": "anywhere"
+            }
+        ],
+        "indent": [
+            "warn",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-extra-semi": "error",
+        "no-throw-literal": "error",
+        "no-cond-assign": "error",
+        "no-param-reassign": "error",
+        "guard-for-in": "error",
+        "curly": "error",
+        "prefer-promise-reject-errors": "error",
+        "prefer-const": [
+            "error",
+            {
+                "ignoreReadBeforeAssign": true
+            }
+        ]
+    }
+}
