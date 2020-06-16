@@ -20,16 +20,16 @@ class Animator
         this.io = io;
 
         // Add default values for the missing options:
-        const actualOptions = Object.assign({}, defaultOptions, options);
+        this.options = Object.assign({}, defaultOptions, options);
 
         // Serve animation files:
-        this.express.use(actualOptions.urlPath, express.static(actualOptions.folderPath));
+        this.express.use(this.options.urlPath, express.static(this.options.folderPath));
 
-        const clientFilesPath = path.join(path.basename(__dirname), 'client');
+        const clientFilesPath = path.join(path.dirname(__dirname), 'client');
 
         // Serve client script files:
         this.express.use(
-            actualOptions.urlPath + '/client',
+            this.options.urlPath + '/client',
             express.static(clientFilesPath, {extensions: ['js']})
         );
 
