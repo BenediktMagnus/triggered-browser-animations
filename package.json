@@ -3,6 +3,7 @@
     "description": "Configure and trigger animations in the browser, e.g. for a browser source in OBS.",
     "author": "Benedikt Magnus",
     "version": "0.1.0-dev",
+    "license": "MIT",
     "keywords": [
         "animation",
         "streaming",
