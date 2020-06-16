@@ -6,7 +6,7 @@
         "node": true
     },
     "parserOptions": {
-        "sourceType": "script",
+        "sourceType": "module",
         "ecmaVersion": 2018
     },
     "extends": [

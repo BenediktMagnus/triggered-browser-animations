@@ -7,7 +7,7 @@ const defaultOptions = {
     namespace: '/animations',
 };
 
-class Animator
+export default class Animator
 {
     /**
      * @param {express.Express} expressServer
@@ -35,5 +35,3 @@ class Animator
 
     }
 }
-
-module.exports = Animator;
