@@ -33,6 +33,13 @@ class Animator
             express.static(clientFilesPath, {extensions: ['js']})
         );
 
+        // Set namespace for socket.io:
+        this.io.of(options.namespace);
+    }
+
+    play (animation)
+    {
+        this.io.of(this.options.namespace).emit('play', animation);
     }
 }
 
