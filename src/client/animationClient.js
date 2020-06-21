@@ -1,6 +1,7 @@
 /* global io */
 
-export default class AnimationClient
+/* exported AnimationClient */
+class AnimationClient
 {
     /**
      * @param {string} namespace
