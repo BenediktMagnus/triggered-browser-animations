@@ -1,6 +1,6 @@
 # **Triggered Browser Animations**
 
-Configure and trigger HTML/CSS/JS based animations in the browser, e.g. for a browser source in streaming software.## **Table of contents**
+Configure and trigger HTML/CSS/JS based animations in the browser, e.g. for a browser source in streaming software.
 
 <hr>
 
@@ -122,8 +122,8 @@ This is the main HTML file that loads all needed scripts and provides the body a
 ### **animations/html/text.html**
 
 At last, the simplest animation possible: A configurable text. \
-Tokens are names surrounded by two courly braces on each side. They will be automatically replaced with the given strings in the
-animation object as shown in the index.js above.
+Tokens are identifiers surrounded by two courly braces on each side. They will be automatically replaced with the given strings in the
+animation object as shown in the index.js file above.
 
 ```html
 <p>{{text}}</p>
@@ -140,7 +140,7 @@ Now navigate to `http://localhost:8080/animations` with your browser. After thre
 
 ### **How can I add CSS and videos?**
 
-Simply put them in your animations folder and link them in your HTML.
+Simply put them in your animations folder and link them in your HTML file.
 
 For example:
 
@@ -191,4 +191,4 @@ html, body {
 ### **My audio/video works fine in the browser but not in OBS as browser source. What can I do?**
 
 Browsers sometimes support more encodings than the rendering library used in OBS. Try to use supported formats. These are typically free
-ones like OGG (for audio) and webm (for video).
+ones like Ogg (for audio) and WebM (for video).
