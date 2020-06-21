@@ -1,5 +1,14 @@
 /* global io */
 
+/**
+* @typedef {
+   {
+       html: string,
+       tokens: Object.<string, string>|undefined
+   }
+} Animation
+*/
+
 /* exported AnimationClient */
 class AnimationClient
 {
@@ -26,8 +35,16 @@ class AnimationClient
         this.socket.connect();
     }
 
+    /**
+     * @param {Animation} animation
+     */
     onPlayAnimation (animation)
     {
+        if (this.targetElement === undefined)
+        {
+            return;
+        }
+
         const xhr = new XMLHttpRequest();
 
         xhr.open('GET', animation.html);
@@ -40,12 +57,11 @@ class AnimationClient
             }
             else
             {
-                const tokenedHtml = this.replaceTokens(xhr.response, animation);
+                const tokens = animation.tokens ? animation.tokens : {};
 
-                if (this.targetElement !== undefined)
-                {
-                    this.targetElement.innerHTML = tokenedHtml;
-                }
+                const tokenedHtml = this.replaceTokens(xhr.response, tokens);
+
+                this.targetElement.innerHTML = tokenedHtml;
             }
         };
 
@@ -54,13 +70,13 @@ class AnimationClient
 
     /**
      * @param {string} html
-     * @param {*} animation
+     * @param {Object.<string, string>} tokens
      */
-    replaceTokens (html, animation)
+    replaceTokens (html, tokens)
     {
         let result = html;
 
-        for (const [key, value] of Object.entries(animation))
+        for (const [key, value] of Object.entries(tokens))
         {
             if (key !== 'html')
             {

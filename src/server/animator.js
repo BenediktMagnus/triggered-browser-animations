@@ -7,6 +7,15 @@ const defaultOptions = {
     namespace: '/animations',
 };
 
+/**
+ * @typedef {
+    {
+        html: string,
+        tokens: Object.<string, string>|undefined
+    }
+} Animation
+*/
+
 class Animator
 {
     /**
