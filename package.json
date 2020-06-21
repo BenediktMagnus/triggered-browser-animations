@@ -2,7 +2,7 @@
     "name": "triggered-browser-animations",
     "description": "Configure and trigger animations in the browser, e.g. for a browser source in streaming software.",
     "author": "Benedikt Magnus",
-    "version": "0.3.0-dev",
+    "version": "0.3.0",
     "license": "MIT",
     "keywords": [
         "animation",
