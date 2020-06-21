@@ -16,6 +16,9 @@ const defaultOptions = {
 } Animation
 */
 
+/**
+ * The animator serves the animation files and is used to trigger animations.
+ */
 class Animator
 {
     /**
@@ -46,6 +49,12 @@ class Animator
         this.io.of(options.namespace);
     }
 
+    /**
+     * Play/Trigger an animation. \
+     * An animation is at least an HTML file to show. It can furthermore contain a list of key value pairs that will be used to replace
+     * tokens in the HTML file.
+     * @param {Animation} animation The animation to play.
+     */
     play (animation)
     {
         this.io.of(this.options.namespace).emit('play', animation);

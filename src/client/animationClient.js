@@ -10,6 +10,9 @@
 */
 
 /* exported AnimationClient */
+/**
+ * The AnimationClient listens for animation triggers and plays them.
+ */
 class AnimationClient
 {
     /**
@@ -26,6 +29,7 @@ class AnimationClient
     }
 
     /**
+     * Run the client and listen for animation triggers.
      * @param {HTMLElement} targetElement
      */
     run (targetElement)
@@ -36,6 +40,7 @@ class AnimationClient
     }
 
     /**
+     * To be called when an anmation is triggered.
      * @param {Animation} animation
      */
     onPlayAnimation (animation)
@@ -69,8 +74,10 @@ class AnimationClient
     }
 
     /**
+     * Replace all tokens in a given HTML string.
      * @param {string} html
      * @param {Object.<string, string>} tokens
+     * @returns {string} The HTML with all tokens replaced.
      */
     replaceTokens (html, tokens)
     {
